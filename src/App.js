@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Labyrinth } from "./solution/Labyrinth";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Labyrinth
+      targetPosition={[7, 8]}
+      availableCells={[
+        [1, 1, 1, 1, 1, 0, 0, 1, 1, 1],
+        [0, 0, 1, 0, 1, 1, 1, 1, 0, 0],
+        [0, 0, 1, 0, 1, 0, 0, 1, 0, 0],
+        [1, 1, 1, 0, 0, 0, 1, 1, 0, 0],
+        [1, 0, 1, 0, 1, 0, 0, 1, 1, 1],
+        [1, 0, 1, 1, 1, 0, 0, 1, 0, 1],
+        [0, 0, 1, 0, 1, 0, 0, 1, 0, 1],
+        [0, 0, 1, 0, 1, 1, 0, 1, 0, 0],
+        [0, 0, 1, 0, 1, 0, 0, 1, 1, 1],
+      ]}
+      startingPosition={[4, 4]}
+      moveLimit={25}
+      cellSize={30}
+    />
   );
 }
 
